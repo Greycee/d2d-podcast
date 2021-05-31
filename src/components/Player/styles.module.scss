@@ -1,0 +1,99 @@
+.playerContainer {
+  width: 26rem;
+  height: 100vh;
+  padding: 5rem 4rem;
+  background: var(--forest);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    color: var(--white)
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer {
+    align-self: stretch;
+    &.empty .progress {
+      opacity: 0.5;
+    }
+  }
+}
+
+.currentEpisode {
+  text-align: center;
+  img{
+    width: 230px;
+  }
+}
+
+.emptyPlayer {
+  width: 100%;
+  height: 20rem;
+  border: 1.5px dashed var(--white);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  span {
+    display: inline-block;
+    width: 4rem;
+    text-align: center;
+  }
+  .slider {
+    flex: 1;
+    .emptySlider {
+      width: 100%;
+      height: 4px;
+      background: var(--white);
+      border-radius: 2px;
+    }
+  } 
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+  button {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    &:disabled {
+      cursor: default;
+      background: transparent!important;
+      filter: none!important;
+      opacity: 0.5;
+    }
+    &:hover {
+      filter: brightness(0.7)
+    }
+    &.playButton {
+      width: 4rem;
+      height: 4rem;
+      background: var(--sea);
+      &:hover {
+        filter: brightness(0.95)
+      }
+    }
+  }
+}
+

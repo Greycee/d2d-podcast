@@ -1,0 +1,79 @@
+.homepage {
+  padding: 5rem 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: scroll;
+  h2 {
+    margin: 3rem 0;
+    color: var(--dark-gray);
+  }
+}
+
+.latestEpisodes {
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    li {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      img {
+        width: 7rem;
+        height: 7rem;
+      }
+      .episodeDetails {
+        flex: 1;
+        margin-left: 1rem;
+        a {
+          display: block;
+          color: var(--dark-gray);
+          text-decoration: none;
+          cursor: pointer;
+          width: 90%;
+          font-size: 0.8rem;
+        }
+        span {
+          display: inline-block;
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          color: var(--dark-gray);
+        }
+      }
+      button {
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        height: 40px;
+        width: 50px;
+        border-radius: 4px;
+        font-size: 0;
+        border: 0;
+        background: transparent;
+        color: var(--teal);
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          filter: drop-shadow(1px 1px 1px gray);
+        }
+      }
+    }
+  }
+}
+
+.allEpisodes {
+  button {
+    width: 50px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 0;
+    border: 0;
+    background: transparent;
+    color: var(--teal);
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      filter: drop-shadow(1px 1px 1px gray);
+    }
+  }
+}
